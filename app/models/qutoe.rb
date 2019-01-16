@@ -1,0 +1,2 @@
+class Qutoe < ApplicationRecord
+end
