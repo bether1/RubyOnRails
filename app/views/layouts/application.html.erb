@@ -3,13 +3,56 @@
   <head>
     <title>Splurty</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="row">
+      <div class="col-3">
+        <div class="circle">
+          <br />
+          Bits
+          <br />
+          Of
+          <br />
+          Wisdom
+        </div>
+      </div>
+      <div class="col-4 slogan">
+        Splurting out unsolicited quotes to make you think
+      </div>
+      <div class="col-5 links">
+        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'About', '#'%>
+      </div>
+    </header>
+
+    <hr />
+
+    <br class="clear" />
+
+    <div class="container">
+
     <%= yield %>
+
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+              <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+            This isn't enough, I need more
+          </div>
+          <div class="col-6">
+            Proudly hacked by <a href="https://bether.netlify.com/">[Beth Munger]</a><br />
+            Want to build your own Splurty Web App - <a href="https://online.bootcampspot.com">Learn how to code here</a>
+          <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+      </div>
+    </div>
+
+
   </body>
 </html>
